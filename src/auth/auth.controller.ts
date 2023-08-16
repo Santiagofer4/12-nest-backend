@@ -18,6 +18,11 @@ export class AuthController {
     return this.authService.login( loginDto )
   }
 
+  @Post('/register')
+  register( @Body() loginDto: LoginDto ) {
+    return this.authService.register(  )
+  }
+
   @Get()
   findAll() {
     return this.authService.findAll();
